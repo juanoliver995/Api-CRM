@@ -1,3 +1,20 @@
 {
-  "clients": []
+  "clients": [
+    {
+      "name": "Juan Oliver",
+      "empresa": "craftercbd",
+      "email": "juanoliver995@gmail.com",
+      "telefono": "3446660154",
+      "notas": "Juan necesita una app para su negocio",
+      "id": 1
+    },
+    {
+      "name": "Franco oliver",
+      "empresa": "franco solutions",
+      "email": "francooliverkpo20@gmail.com",
+      "telefono": "3446520154",
+      "notas": "Franco necesita un sitio web para su emprendimiento",
+      "id": 2
+    }
+  ]
 }

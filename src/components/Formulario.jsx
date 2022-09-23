@@ -4,11 +4,11 @@ import * as Yup from "yup"
 import ErrorMessage from './ErrorMessage'
 import { useNavigate } from 'react-router-dom'
 import Loader from './Loader'
-import Client from './Client'
+
 
 
 const Formulario = ({ client, isLoading }) => {
-
+    import.meta.env.VITE_API_URL
     const navigate = useNavigate()
     const newClientSchema = Yup.object().shape({
         name: Yup.string().min(3, "El nombre es muy corto").max(40, "El nombre es muy largo").required('El nombre es obligatorio'),
@@ -21,7 +21,7 @@ const Formulario = ({ client, isLoading }) => {
         try {
             let respuesta = null
             if (client.id) {
-                const url = `http://localhost:3000/clients/${client.id}`
+                const url = `${import.meta.env.VITE_API_URL}/${client.id}`
                 respuesta = await fetch(url, {
                     method: "PUT",
                     body: JSON.stringify(values),
@@ -31,7 +31,7 @@ const Formulario = ({ client, isLoading }) => {
                 })
 
             } else {
-                const url = "http://localhost:3000/clients"
+                const url = import.meta.env.VITE_API_URL
                 respuesta = await fetch(url, {
                     method: "POST",
                     body: JSON.stringify(values),
@@ -41,7 +41,7 @@ const Formulario = ({ client, isLoading }) => {
                 })
             }
             await respuesta.json()
-            navigate("/clients")
+            navigate("/")
         } catch (error) {
             console.log(error)
         }

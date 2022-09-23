@@ -14,8 +14,8 @@ const Client = ({ client, handleDelete }) => {
                 </td>
                 <td className="p-3 text-center">{empresa}</td>
                 <td className="p-3 text-center">
-                    <button onClick={() => navigate(`/clients/${id}`)} type="button" className="bg-yellow-400 hover:bg-yellow-500 block w-full text-white p-2 uppercase font-bold text-xs">Ver</button>
-                    <button onClick={() => navigate(`/clients/edit/${id}`)} type="button" className="bg-blue-600 hover:bg-blue-700 block w-full text-white p-2 uppercase font-bold text-xs mt-3">Editar</button>
+                    <button onClick={() => navigate(`/${id}`)} type="button" className="bg-yellow-400 hover:bg-yellow-500 block w-full text-white p-2 uppercase font-bold text-xs">Ver</button>
+                    <button onClick={() => navigate(`/edit/${id}`)} type="button" className="bg-blue-600 hover:bg-blue-700 block w-full text-white p-2 uppercase font-bold text-xs mt-3">Editar</button>
                     <button onClick={() => handleDelete(id)} type="button" className="bg-red-600 hover:bg-red-700 block w-full text-white p-2 uppercase font-bold text-xs mt-3">Eliminar</button>
                 </td>
             </tr>
