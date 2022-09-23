@@ -8,7 +8,7 @@ import Loader from './Loader'
 
 
 const Formulario = ({ client, isLoading }) => {
-    import.meta.env.VITE_API_URL
+
     const navigate = useNavigate()
     const newClientSchema = Yup.object().shape({
         name: Yup.string().min(3, "El nombre es muy corto").max(40, "El nombre es muy largo").required('El nombre es obligatorio'),
